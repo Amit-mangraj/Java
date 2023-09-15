@@ -110,7 +110,6 @@ INDEX VERSION 1.132+C:\Users\nEW u\Documents\STS\NewSTSWorkshop\.metadata\.plugi
 978556950.index
 340780773.index
 1749011244.index
-1038109296.index
 240938096.index
 847886557.index
 2381546944.index
