@@ -1,0 +1,19 @@
+package Polymorphism;
+
+public class RuntimePolymorphism {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     AnyVehicle vehicleObj = new AnyVehicle();
+     vehicleObj.milage(100, 6);
+     
+     AnyVehicle AnyVehiclebikeObj = new Bike();
+     AnyVehiclebikeObj.milage(80, 7);
+     
+     Bike bikeObj = new Bike();
+     bikeObj.milage(40, 3);
+    // Bike bikeObj2 = new AnyVehicle(); we can not create child class object with parent class constructor
+     
+	}
+
+}

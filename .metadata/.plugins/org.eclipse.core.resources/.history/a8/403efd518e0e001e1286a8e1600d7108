@@ -1,0 +1,39 @@
+package com.java.programs;
+
+import java.util.Scanner;
+
+public class MissingNumber {
+
+	public int findmissingNumber(int[] arr) {
+		int n = arr.length+1;
+		int actualSum = (n * (n+1)) / 2;
+		int expectedsum= 0;
+		for(int number : arr)
+		{
+			expectedsum+= number;
+		}
+		return actualSum-expectedsum;
+		
+	}
+	public void displayMissnigNumber(int[] array) {
+		MissingNumber missnumber = new MissingNumber();
+		int number = missnumber.findmissingNumber(array);
+		System.out.println("Missing Number is :" + number);
+		
+	}
+	public static void main(String[] args) {
+		int size = 5;
+		// TODO Auto-generated method stub
+		OneDimentionalArray oneDArray = new OneDimentionalArray(size);
+		try (Scanner sc = new Scanner(System.in)) {
+			for (int i = 0; i < oneDArray.arr.length; i++) {
+				oneDArray.arr[i] = sc.nextInt();
+			}
+		}
+  
+		MissingNumber missnumber = new MissingNumber();
+		
+		missnumber.displayMissnigNumber(oneDArray.arr);
+	}
+
+}

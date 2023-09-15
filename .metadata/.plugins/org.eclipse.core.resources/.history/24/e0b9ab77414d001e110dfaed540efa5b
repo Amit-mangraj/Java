@@ -1,0 +1,17 @@
+package com.java.programs;
+
+import java.util.Arrays;
+
+public class FindSecondSmallest {
+	public static void findSecondSmallest(int[] arr) {
+		int secondesamll =Arrays.stream(arr).sorted().skip(1).findFirst().orElseThrow();
+		System.out.println("Second smallest element: "+ secondesamll);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      int arr[] = new int[] {1,1,3,2,4,5}; //2
+      findSecondSmallest(arr);
+	}
+
+}

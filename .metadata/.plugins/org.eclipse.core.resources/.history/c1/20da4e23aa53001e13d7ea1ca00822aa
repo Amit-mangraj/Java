@@ -1,0 +1,26 @@
+package ExceptionHandlingDemo;
+
+public class ExceptionHandling3 {
+
+	public static void main(String[] args) {
+		{
+	        int x[]=new int[10];
+	        try
+	        {
+	            int y=5/0;
+	            System.out.println(y);
+	            x[12]=y;
+
+	        }
+	        catch (ArithmeticException r)
+	        {
+	            System.out.println(r);
+	        }
+	        catch (ArrayIndexOutOfBoundsException c)
+	        {
+	            System.out.println(c);
+	        }
+		}
+	}
+
+}

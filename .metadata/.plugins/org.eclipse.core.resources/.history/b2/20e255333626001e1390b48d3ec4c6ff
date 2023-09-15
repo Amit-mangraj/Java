@@ -1,0 +1,24 @@
+package com.Strings.programs;
+
+public class ResverseString {
+	public String reverseword(String S) {
+		  StringBuilder str = new StringBuilder(S).reverse();
+		  System.out.println(str.toString()); //gfe.cba -->efg.abc
+		  
+		  String string = str.toString();
+		  String[]  ch =  string.split(".",0);
+		  for(String s:ch) {
+			  System.out.println(s);
+		  }
+		 
+		  return str.toString();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abc.efg"; //efg.abc
+		ResverseString rs = new ResverseString();
+		rs.reverseword(str);
+	}
+
+}

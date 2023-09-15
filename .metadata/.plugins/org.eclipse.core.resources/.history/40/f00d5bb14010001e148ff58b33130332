@@ -1,0 +1,38 @@
+package com.java.programs;
+
+import java.util.Arrays;
+
+public class SellAndBuyStocks {
+
+	public int maxprofit(int arr[]) {
+		int minprice = Integer.MAX_VALUE;
+		int maxProfit = 0;
+		for(int price:arr) {
+			if(price<minprice)
+			{
+				minprice = price;
+			}else if((price-minprice)>maxProfit) {
+				maxProfit = price-minprice;
+			}
+			
+		}
+		return maxProfit;
+	}
+	
+	public void display(int arr[]) {
+		SellAndBuyStocks showProfit = new SellAndBuyStocks();
+	int newararray[] =showProfit.maxprofit(arr);
+
+		System.out.println("Array After removing Duplicates: " + Arrays.toString(newararray));
+	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int arr[] = new int[] {5, 4, 6,1,9,2};
+		System.out.println("orignal array :" + Arrays.toString(arr));
+		SellAndBuyStocks showProfit = new SellAndBuyStocks();
+		showProfit.display(arr);
+	}
+
+}

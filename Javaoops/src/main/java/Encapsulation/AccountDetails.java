@@ -1,0 +1,51 @@
+package Encapsulation;
+
+public class AccountDetails {
+	// priavte attributes of class to limit accessility to the outter world
+	private String Name;
+	private int accno;
+	private double balance;
+	
+	//parameterized constructor
+	public AccountDetails(String name, int accno, double balance) {
+		super();
+		Name = name;
+		this.accno = accno;
+		this.balance = balance;
+	}
+	
+	//non parameterized constructor
+	public AccountDetails() {
+		super();
+	}
+ 
+	
+	//getters and setters to allow modification of private attributes
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public int getAccno() {
+		return accno;
+	}
+	public void setAccno(int accno) {
+		this.accno = accno;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		if(balance>50) {
+			this.balance = balance;
+		}
+	}
+	@Override
+	public String toString() {
+		return "AccountDetails [Name=" + Name + ", accno=" + accno + ", balance=" + balance + "]";
+	}
+	
+	
+
+}

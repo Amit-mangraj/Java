@@ -1,0 +1,42 @@
+package com.java.programs;
+
+public class InsertAnElementInArray {
+	int count =0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = new int[4];
+		try {
+			InsertAnElementInArray insertele = new  InsertAnElementInArray();
+			for(int i=0;i<arr.length;i++) {
+				insertele.insert(arr, i+1);
+			}
+			insertele.print(arr);
+			
+			insertele.insertAtStart(arr, 8);
+			System.out.println();
+			insertele.print(arr);
+			
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Array index out of bound");
+		}
+		
+	}
+	
+	public void insert(int a[], int val) {
+		a[count++]=val;
+	}
+	
+	public void insertAtStart(int arr[],int value) {
+		for(int k=arr.length-1;k>0;k--) {
+			arr[k]=arr[k-1];
+		}
+		arr[0] = value;
+	}
+	
+	public void print(int nums[]) {
+		for(int j=0;j<nums.length;j++) {
+			System.out.print(nums[j]+" ");
+		}
+	}
+
+}

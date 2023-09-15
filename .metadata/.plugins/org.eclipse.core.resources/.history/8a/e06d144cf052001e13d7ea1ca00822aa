@@ -1,0 +1,36 @@
+package com.java.programs;
+
+import java.util.Arrays;
+
+public class DeleteFromArray {
+	int count = 0;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = new int[4];
+		try {
+			DeleteFromArray deleteele = new DeleteFromArray();
+			for (int i = 0; i < arr.length; i++) {
+				deleteele.insert(arr, i + 1);
+			}
+			System.out.println(Arrays.toString(arr));
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Array indexOutOfBound Exception Found");
+		}
+	}
+
+	public void insert(int a[], int val) {
+		a[count++] = val;
+	}
+
+	public static int[] deleteFromStart(int arr[]) {
+
+		return arr;
+	}
+
+	public static int[] deleteFromEnd(int arr[]) {
+		int newArray[] = new int[arr.length - 1];
+		return arr;
+	}
+}

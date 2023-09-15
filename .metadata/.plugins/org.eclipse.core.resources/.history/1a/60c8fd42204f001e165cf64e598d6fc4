@@ -1,0 +1,8 @@
+package Encapsulation;
+
+public class AccountDetails {
+private String Name;
+private int accno;
+private int balance;
+
+}

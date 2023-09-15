@@ -1,0 +1,24 @@
+package ExceptionHandlingDemo;
+
+import java.lang.*;
+
+class Demo {
+	int var;
+}
+
+public class ExceptionHandlingDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Invoking a method or member variable from a null object
+		Demo d = null;
+		try {
+			System.out.println(d.var);
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			System.out.println("Nullpointer Exception Caught");
+		}
+
+	}
+
+}

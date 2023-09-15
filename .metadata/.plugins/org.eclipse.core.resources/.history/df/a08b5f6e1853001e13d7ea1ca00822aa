@@ -1,0 +1,19 @@
+package com.java.programs;
+
+public class SearchElementInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int arr[] = new int[] {3,5,23,64,12,54};
+		
+		SearchElementInArray searchelement = new SearchElementInArray();
+		searchelement.search(arr,23);
+	}
+	
+	public static int[] search(int a[], int value) {
+		return a;
+	}
+	
+
+}

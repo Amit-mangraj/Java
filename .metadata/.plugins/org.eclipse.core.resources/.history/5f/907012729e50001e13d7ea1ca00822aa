@@ -1,0 +1,17 @@
+package ExceptionHandlingDemo;
+
+class Demo {
+	int var;
+}
+
+public class ExceptionHandlingDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// assign null value to object created of class and trying to access the member
+		// variable of the
+		Demo d = null;
+		System.out.println(d.var);
+	}
+
+}

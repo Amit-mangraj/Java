@@ -1,0 +1,17 @@
+package com.Strings.programs;
+
+public class ResverseString {
+	public String reverseword(String S) {
+		  StringBuilder str = new StringBuilder(S).reverse();
+		  System.out.println(str.toString());
+		  return str.toString();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abc.efg";
+		ResverseString rs = new ResverseString();
+		rs.reverseword(str);
+	}
+
+}

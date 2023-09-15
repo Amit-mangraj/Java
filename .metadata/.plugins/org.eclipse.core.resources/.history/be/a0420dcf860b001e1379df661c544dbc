@@ -1,0 +1,20 @@
+package com.dependency.inejction1;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.dependency.inejction.Student;
+
+@SpringBootApplication
+public class DependencyInjection1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DependencyInjection1Application.class, args);
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+	      Student amit  = context.getBean("student",Student.class);
+	      amit.displayName();
+	}
+
+}

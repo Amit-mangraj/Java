@@ -1,0 +1,16 @@
+package HasMapInternallyWorks;
+
+public class CountFrequency {
+	public void countFreq(int arr[]) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = new int[] {1,2,2,1,1,3};
+		
+		CountFrequency cf = new CountFrequency();
+		cf.countFreq(arr);
+	}
+
+}

@@ -1,0 +1,36 @@
+package HasMapInternallyWorks;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CountFrequency {
+	public void countFreq(int arr[]) {
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			if (map.containsKey(arr[i])) {
+				map.put(arr[i], map.get(arr[i]) + 1);
+			} else {
+				map.put(arr[i], 1);
+			}
+		}
+		int result[] = new int[map.size()];
+		int j=0;
+		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			//System.out.println(entry.getKey() + " " + entry.getValue());
+				result[j++]=entry.getKey();
+		}
+		
+		for(int k=0;k<result.length;k++) {
+			System.out.println(result[k]);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = new int[] { 1, 2, 2, 1, 1, 3 };
+
+		CountFrequency cf = new CountFrequency();
+		cf.countFreq(arr);
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.Strings.programs;
+
+import java.util.Arrays;
+
+public class ResverseString {
+	public String reverseword(String S) {
+		  String st = new StringBuilder(S).reverse().toString();
+		  System.out.println(st);
+		  String[]  ch =  st.split("\\.",-2);
+		  System.out.println(Arrays.toString(ch));
+		  String newstring ="";
+		  for(String s:ch) {
+			 newstring= new StringBuilder(s).reverse().append('.').toString();
+		  }
+		 System.out.println(newstring);
+		  return newstring;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abc.efg.hij"; //efg.abc
+		ResverseString rs = new ResverseString();
+		rs.reverseword(str);
+	}
+
+}

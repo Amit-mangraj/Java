@@ -1,0 +1,37 @@
+package Encapsulation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class WithdrawMoney {
+
+	public static void checkBalance(List<AccountDetails>newlist) {
+		for(AccountDetails ac: newlist)
+		if(ac.getBalance()>100.00) {
+			System.out.println(ac.getName()+"Your Balance is :" +ac.getBalance());
+		}else {
+			System.out.println("Your Balance is low");
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccountDetails ad = new AccountDetails();
+		ad.setAccno(1);
+		ad.setName("amit");
+		ad.setBalance(1000);
+		
+		AccountDetails ad2 = new AccountDetails();
+		ad.setAccno(1);
+		ad.setName("kaustav");
+		ad.setBalance(12);
+
+       
+       List<AccountDetails> list = new ArrayList<AccountDetails>();
+       list.add(ad);
+       list.add(ad2);
+     
+       checkBalance(list);
+	}
+
+}

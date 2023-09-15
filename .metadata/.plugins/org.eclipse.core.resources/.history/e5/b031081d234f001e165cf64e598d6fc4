@@ -1,0 +1,21 @@
+package Encapsulation;
+
+public class WithdrawMoney {
+
+	public void checkBalance(int Balance) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccountDetails ad = new AccountDetails();
+		ad.setAccno(1);
+		ad.setName("amit");
+		ad.setBalance(1000);
+		
+       System.out.println(ad.getName());
+       System.out.println(ad.getAccno());
+       System.out.println(ad.getBalance());
+	}
+
+}

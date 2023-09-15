@@ -1,0 +1,12 @@
+package Polymorphism;
+
+public class Bike extends AnyVehicle{
+public void move() {
+	System.out.println("Bike can move too!");
+}
+
+public double milage(int km,int fuel) {
+	System.out.println("Milage of Bike is ");
+	return km/fuel;
+}
+}

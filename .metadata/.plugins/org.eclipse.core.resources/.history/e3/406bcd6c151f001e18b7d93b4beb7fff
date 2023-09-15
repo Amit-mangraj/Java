@@ -1,0 +1,13 @@
+package com.java.collection.programs;
+import java.util.*;
+
+public class Arraylist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   List<Integer> list = new ArrayList<Integer>();
+   list.add(5);
+   list.add(6);
+	}
+
+}

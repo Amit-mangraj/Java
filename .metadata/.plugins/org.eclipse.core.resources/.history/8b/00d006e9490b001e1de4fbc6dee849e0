@@ -1,0 +1,16 @@
+package com.dependency.inejction;
+
+public class Student {
+	//literal dependecy of student
+			//String studentName;  // this is not a good approch as it is not supporting encasulation and variable is exposed to other class
+			private String studentName; //
+			
+			//setter injection
+			public void setStudentName(String studentName) { // injecting student using setter method
+				this.studentName = studentName;
+			}
+
+			public void displayName() {
+				System.out.println("Student Name is :" + studentName);
+			}
+}

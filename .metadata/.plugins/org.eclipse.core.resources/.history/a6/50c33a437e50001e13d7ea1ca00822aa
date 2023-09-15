@@ -1,0 +1,14 @@
+package Polymorphism;
+
+public class RuntimePolymorphism {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     AnyVehicle vehicleObj = new AnyVehicle();
+     AnyVehicle AnyVehiclebikeObj = new Bike();
+     Bike bikeObj = new Bike();
+     Bike bikeObj2 = new AnyVehicle();
+     
+	}
+
+}

@@ -1,0 +1,17 @@
+package ExceptionHandlingDemo;
+
+public class ExceptionHandDemo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			//class loader loadClass Method will not able to load the class 
+         Class.forName("Test");
+		} catch (ClassNotFoundException e) {
+			// TODO: handle exception
+			//System.out.println("Class Not Found");
+			e.printStackTrace();
+		}
+	}
+
+}

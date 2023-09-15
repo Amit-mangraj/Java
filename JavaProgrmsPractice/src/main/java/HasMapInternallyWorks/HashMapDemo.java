@@ -1,0 +1,25 @@
+package HasMapInternallyWorks;
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		// map size of 16 is created
+		// Hashmap uses array datastructure to store data in key value pair
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		// Hashmap uses hashcode() method of Object class to claculate hashcode of key
+		// map.hashCode();
+		
+		map.put("banana", 2);
+		map.put("apple", 4);
+		map.put("custurd", 3);
+	
+		for(Map.Entry<String, Integer>entry : map.entrySet()) {
+			System.out.println(entry.getKey()+" "+ entry.getValue());
+		}
+		}
+
+
+}

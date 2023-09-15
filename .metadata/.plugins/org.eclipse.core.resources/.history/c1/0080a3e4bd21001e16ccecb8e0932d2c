@@ -1,0 +1,24 @@
+package com.Strings.programs;
+
+import java.util.Scanner;
+
+public class Basics {
+	
+	//String is object with sequeece of of Characters
+	//A
+	public static void main(String[] args) {
+		String s = "try hard";
+		System.out.println(s);
+		
+		//string in java are immutable privious value of string remains unchanged and variable string now refer to new string
+		s =s+ new String("amit");
+		
+		Scanner sc = new Scanner(System.in);
+		 String  str = sc.nextLine();
+		 
+		 StringBuilder stbu=new StringBuilder();
+		 System.out.println(stbu.capacity());
+		System.out.println(s +str);
+	}
+
+}

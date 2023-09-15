@@ -1,0 +1,39 @@
+package com.java.programs;
+
+public class SearchElementInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int arr[] = new int[] { 3 ,5,8,9,13};
+
+		int index = search(arr, 3);
+
+		if (index == -1) {
+			System.out.println("Not found");
+		} else {
+			System.out.println(index);
+		}
+		
+		
+	}
+
+	// Brute Force O(n) approach
+	public static int search(int a[], int value) {
+		if (a.length == 1) {
+			return 0;
+		} else {
+			for (int i = 0; i < a.length; i++) {
+				if (a[i] == value) {
+					return i;
+				}
+			}
+			return -1;
+		} // O(n) time complexity
+	}
+
+	public static int binarySearch(int a[], int value, int start, int end) {
+
+	}
+
+}

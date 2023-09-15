@@ -1,0 +1,7 @@
+package Polymorphism;
+
+public class AnyVehicle {
+public void move() {
+	System.out.println("Any Vehicle can move");
+}
+}

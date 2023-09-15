@@ -1,0 +1,7 @@
+package Polymorphism;
+
+public class Bike extends AnyVehicle{
+public void move() {
+	System.out.println("Bike can move too!");
+}
+}

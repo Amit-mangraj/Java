@@ -1,0 +1,14 @@
+package HasMapInternallyWorks;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		//map size of 16 is created
+		Map<String, Integer> map = new HashMap<String, Integer>();  
+
+	}
+
+}

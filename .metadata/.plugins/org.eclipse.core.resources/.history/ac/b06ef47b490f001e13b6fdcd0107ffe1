@@ -1,0 +1,46 @@
+package com.java.programs;
+
+import java.util.Arrays;
+
+public class RemoveDuplicate {
+
+	public int[] removeduplicate(int arr[]) {
+		int n = arr.length;
+		int unquearray[] = new int[n];
+		int pointer = 0;
+		
+		//1 2 2 3 4
+		for(int i=0;i<n;i++)
+		{
+			boolean isduplicate = false;
+			for(int j=i+1;j<n;j++) {
+				if(arr[i]==arr[j])
+				{
+					isduplicate = true;
+					break;
+				}
+			}
+         if(!isduplicate) {
+            arr[pointer++] = arr[i];
+		}
+	
+		}
+		return Arrays.copyOf(unquearray, pointer);
+	}
+ 
+	public void display(int arr[]) {
+		RemoveDuplicate rd = new RemoveDuplicate();
+	int newararray[] =rd.removeduplicate(arr);
+	for(int i =0;i<arr.length;i++)
+	{
+		System.err.println(newararray);
+	}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = new int[] {1,2,2,3,4,4};
+		RemoveDuplicate rd = new RemoveDuplicate();
+		rd.display(arr);
+	}
+
+}

@@ -1,0 +1,84 @@
+package SortTheObjects;
+
+import java.util.Comparator;
+
+public class Employee implements Comparable<Employee> {
+	private int age;
+	private String name;
+	private int salary;
+	
+	public Employee() {
+		super();
+	}
+
+	public Employee(int age, String name, int salary) {
+		super();
+		this.age = age;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	//comparable is present in java.lang package we need to override the compareTo method of comparable class and change the 
+	//source code of employee class
+	//no need to pass any argument in Arrays or collections.sort it will do natural order of object on the basis of elements by its own
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method stub
+		return this.age-o.age;
+	}
+
+	
+	//comparable provide single sorting i.e sort on the basis of one single element lile by age or salary or by name
+	/*
+	 * @Override public int compareTo(Employee o) { // TODO Auto-generated method
+	 * stub return this.salary-o.salary; }
+	 */
+	
+}
+
+//explicitly create class implimenting Comparator no need change sorce code of Employee class
+//we can sort the object/collection on the basis of multiple elements
+//it is present in java.util package as its utily method to provide 
+class AgeComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		// TODO Auto-generated method stub
+		return o1.getAge()-o2.getAge();
+	}
+	
+}
+
+class SalaryComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		// TODO Auto-generated method stub
+		return o1.getSalary()-o2.getSalary();
+	}
+	
+}
